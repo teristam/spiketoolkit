@@ -13,6 +13,7 @@ class BasePreprocessorRecordingExtractor(RecordingExtractor):
         self._recording = recording
         self.copy_channel_properties(recording)
         self.copy_epochs(recording)
+        self.copy_annotations(recording)
         self.is_filtered = self._recording.is_filtered
 
     def get_channel_ids(self):
