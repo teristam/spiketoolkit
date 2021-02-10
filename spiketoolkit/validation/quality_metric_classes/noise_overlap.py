@@ -184,7 +184,7 @@ class NoiseOverlap(QualityMetric):
 
 
 def _compute_pca_features(X, num_components):
-    u, s, vt = np.linalg.svd(X)
+    u, s, vt = np.linalg.svd(X, full_matrices=False)
     return u[:, :num_components].T
 
 
